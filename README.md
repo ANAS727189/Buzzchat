@@ -23,6 +23,7 @@ BuzzChat is a modern, real-time messaging application built with React and Node.
 - React
 - Zustand
 - Tailwind CSS
+- Daisy UI
 
 ### **Backend**
 - Node.js
