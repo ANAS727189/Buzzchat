@@ -9,6 +9,7 @@ const port  = process.env.PORT || 3000;
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({extended: true}));
+app.set('trust proxy', true);
 app.use(cors({
     origin: 'http://localhost:5173',
     credentials: true
@@ -19,6 +20,8 @@ app.use(cors({
 import {authRoutes} from "./routes/auth.routes.js";
 import { messageRoutes } from "./routes/message.routes.js";
 import rateLimit from 'express-rate-limit';
+
+
 
 const authLimiter = rateLimit({
     windowMs: 15 * 60 * 1000, 
