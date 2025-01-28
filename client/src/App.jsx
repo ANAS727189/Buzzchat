@@ -9,20 +9,20 @@ import { useThemeStore } from "./store/useThemeStore.js";
 
 function App() {
   const {authUser, checkAuth, isCheckingAuth} = useAuthStore();
-const { theme}  = useThemeStore();
+const {theme}  = useThemeStore();
   useEffect(() => {
     checkAuth();
   }, [checkAuth]);
 
   console.log({ authUser });
 
-  if (isCheckingAuth && !authUser)
-    return (
-      <div className="flex items-center justify-center h-screen">
-        {/* <Loader className="size-10 animate-spin" /> */}
-        <span className="loading loading-infinity loading-xl"></span>
-      </div>
-    );
+  // if (isCheckingAuth)
+  //   return (
+  //     <div className="flex items-center justify-center h-screen">
+  //       {/* <Loader className="size-10 animate-spin" /> */}
+  //       <span className="loading loading-infinity loading-xl"></span>
+  //     </div>
+  //   );
 
   return (
     <>  
